@@ -15,7 +15,7 @@ interface LabelRequestBuilderInterface
      * @param string|null $brokerReference Reference to the GLS Partner (optional)
      * @return LabelRequestBuilderInterface
      */
-    public function setShipperAccount(string $shipperId, string $brokerReference = null): LabelRequestBuilderInterface;
+    public function setShipperAccount(string $shipperId, ?string $brokerReference = null): LabelRequestBuilderInterface;
 
     /**
      * @param string[] $references The customer given reference numbers for all parcels created (optional)

@@ -1,6 +1,7 @@
 {
   "name": "gls-m2-extension/sdk-api-parcel-processing",
   "description": "GLS Web API for Parcel Processing SDK",
+  "version": "1.2",
   "license": "MIT",
   "keywords": [
     "php",

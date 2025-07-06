@@ -27,7 +27,7 @@ class ReturnShipmentRequestBuilder implements ReturnShipmentRequestBuilderInterf
 
     public function setShipperAccount(
         string $shipperId,
-        string $brokerReference = null
+        ?string $brokerReference = null
     ): LabelRequestBuilderInterface {
         $this->data['account']['shipperId'] = $shipperId;
         $this->data['account']['brokerReference'] = $brokerReference ?? '';
@@ -48,13 +48,13 @@ class ReturnShipmentRequestBuilder implements ReturnShipmentRequestBuilderInterf
         string $city,
         string $street,
         string $name,
-        string $company = null,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $contactPerson = null,
-        string $state = null,
-        string $comment = null
+        ?string $company = null,
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $contactPerson = null,
+        ?string $state = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface {
         $this->data['shipperAddress']['country'] = $country;
         $this->data['shipperAddress']['postalCode'] = $postalCode;
@@ -78,13 +78,13 @@ class ReturnShipmentRequestBuilder implements ReturnShipmentRequestBuilderInterf
         string $city,
         string $street,
         string $name,
-        string $company = null,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $contactPerson = null,
-        string $state = null,
-        string $comment = null
+        ?string $company = null,
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $contactPerson = null,
+        ?string $state = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface {
         $this->data['pickupAddress']['country'] = $country;
         $this->data['pickupAddress']['postalCode'] = $postalCode;
@@ -108,14 +108,14 @@ class ReturnShipmentRequestBuilder implements ReturnShipmentRequestBuilderInterf
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface {
         $this->data['recipientAddress']['country'] = $country;
         $this->data['recipientAddress']['postalCode'] = $postalCode;
@@ -144,8 +144,8 @@ class ReturnShipmentRequestBuilder implements ReturnShipmentRequestBuilderInterf
     public function addParcel(
         float $weightInKg,
         bool $qrCode = false,
-        string $reference = null,
-        string $comment = null
+        ?string $reference = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface {
         $this->data['parcels'][] = [
             'weight' => $weightInKg,

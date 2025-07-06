@@ -28,7 +28,7 @@ class ShipmentRequestBuilder implements ShipmentRequestBuilderInterface
 
     public function setShipperAccount(
         string $shipperId,
-        string $brokerReference = null
+        ?string $brokerReference = null
     ): LabelRequestBuilderInterface {
         $this->data['account']['shipperId'] = $shipperId;
         $this->data['account']['brokerReference'] = $brokerReference ?? '';
@@ -65,14 +65,14 @@ class ShipmentRequestBuilder implements ShipmentRequestBuilderInterface
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface {
         $this->data['shipperAddress']['country'] = $country;
         $this->data['shipperAddress']['postalCode'] = $postalCode;
@@ -97,13 +97,13 @@ class ShipmentRequestBuilder implements ShipmentRequestBuilderInterface
         string $city,
         string $street,
         string $name,
-        string $company = null,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $contactPerson = null,
-        string $state = null,
-        string $comment = null
+        ?string $company = null,
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $contactPerson = null,
+        ?string $state = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface {
         $this->data['recipientAddress']['country'] = $country;
         $this->data['recipientAddress']['postalCode'] = $postalCode;
@@ -134,14 +134,14 @@ class ShipmentRequestBuilder implements ShipmentRequestBuilderInterface
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface {
         $this->data['returnAddress']['country'] = $country;
         $this->data['returnAddress']['postalCode'] = $postalCode;
@@ -166,14 +166,14 @@ class ShipmentRequestBuilder implements ShipmentRequestBuilderInterface
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface {
         $this->data['pickupAddress']['country'] = $country;
         $this->data['pickupAddress']['postalCode'] = $postalCode;
@@ -222,11 +222,11 @@ class ShipmentRequestBuilder implements ShipmentRequestBuilderInterface
 
     public function addParcel(
         float $weightInKg,
-        string $reference = null,
-        string $returnReference = null,
-        float $codAmount = null,
-        string $codReference = null,
-        string $comment = null
+        ?string $reference = null,
+        ?string $returnReference = null,
+        ?float $codAmount = null,
+        ?string $codReference = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface {
         $this->data['parcels'][] = [
             'weight' => $weightInKg,

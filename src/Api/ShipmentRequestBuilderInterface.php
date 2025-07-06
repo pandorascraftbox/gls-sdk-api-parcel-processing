@@ -45,14 +45,14 @@ interface ShipmentRequestBuilderInterface extends LabelRequestBuilderInterface
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface;
 
     /**
@@ -78,13 +78,13 @@ interface ShipmentRequestBuilderInterface extends LabelRequestBuilderInterface
         string $city,
         string $street,
         string $name,
-        string $company = null,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $contactPerson = null,
-        string $state = null,
-        string $comment = null
+        ?string $company = null,
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $contactPerson = null,
+        ?string $state = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface;
 
     /**
@@ -121,14 +121,14 @@ interface ShipmentRequestBuilderInterface extends LabelRequestBuilderInterface
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface;
 
     /**
@@ -155,14 +155,14 @@ interface ShipmentRequestBuilderInterface extends LabelRequestBuilderInterface
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface;
 
     /**
@@ -200,11 +200,11 @@ interface ShipmentRequestBuilderInterface extends LabelRequestBuilderInterface
      */
     public function addParcel(
         float $weightInKg,
-        string $reference = null,
-        string $returnReference = null,
-        float $codAmount = null,
-        string $codReference = null,
-        string $comment = null
+        ?string $reference = null,
+        ?string $returnReference = null,
+        ?float $codAmount = null,
+        ?string $codReference = null,
+        ?string $comment = null
     ): ShipmentRequestBuilderInterface;
 
     /**

@@ -29,13 +29,13 @@ interface ReturnShipmentRequestBuilderInterface extends LabelRequestBuilderInter
         string $city,
         string $street,
         string $name,
-        string $company = null,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $contactPerson = null,
-        string $state = null,
-        string $comment = null
+        ?string $company = null,
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $contactPerson = null,
+        ?string $state = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface;
 
     /**
@@ -61,13 +61,13 @@ interface ReturnShipmentRequestBuilderInterface extends LabelRequestBuilderInter
         string $city,
         string $street,
         string $name,
-        string $company = null,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $contactPerson = null,
-        string $state = null,
-        string $comment = null
+        ?string $company = null,
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $contactPerson = null,
+        ?string $state = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface;
 
     /**
@@ -94,14 +94,14 @@ interface ReturnShipmentRequestBuilderInterface extends LabelRequestBuilderInter
         string $city,
         string $street,
         string $company,
-        string $email = null,
-        string $phone = null,
-        string $mobile = null,
-        string $state = null,
-        string $companyContactPerson = null,
-        string $companyDivision = null,
-        string $companyUnit = null,
-        string $comment = null
+        ?string $email = null,
+        ?string $phone = null,
+        ?string $mobile = null,
+        ?string $state = null,
+        ?string $companyContactPerson = null,
+        ?string $companyDivision = null,
+        ?string $companyUnit = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface;
 
     /**
@@ -116,8 +116,8 @@ interface ReturnShipmentRequestBuilderInterface extends LabelRequestBuilderInter
     public function addParcel(
         float $weightInKg,
         bool $qrCode = false,
-        string $reference = null,
-        string $comment = null
+        ?string $reference = null,
+        ?string $comment = null
     ): ReturnShipmentRequestBuilderInterface;
 
     /**
