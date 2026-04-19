@@ -40,5 +40,10 @@
     "psr-4": {
       "GlsGroup\\Sdk\\ParcelProcessing\\Test\\": "test/"
     }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.2.x-dev"
+    }
   }
 }
